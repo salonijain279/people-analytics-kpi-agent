@@ -1,6 +1,6 @@
-"""Builds a monthly workforce panel from the public IBM HR Analytics Employee
-Attrition dataset (1,470 real employee records: department, role, tenure,
-and attrition status).
+"""Builds a monthly workforce panel from a public employee attrition dataset
+(1,470 real employee records: department, role, tenure, and attrition
+status).
 
 The source dataset is a single snapshot -- each employee has a tenure
 (`YearsAtCompany`) and an attrition flag, but no explicit hire/exit dates.

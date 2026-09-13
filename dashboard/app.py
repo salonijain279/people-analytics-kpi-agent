@@ -109,7 +109,7 @@ def main():
     page = st.sidebar.radio("Page", ["Ask a Question", "Proactive Signal Scan"])
     st.sidebar.divider()
     st.sidebar.caption(
-        "Data: public IBM HR Analytics Employee Attrition dataset (1,470 employees). "
+        "Data: a public employee attrition dataset (1,470 employees). "
         "Monthly headcount/termination panel is derived from each employee's real "
         "tenure and attrition status -- see the README for exactly how."
     )

@@ -1,4 +1,4 @@
-# People Analytics Conversational KPI Agent
+# People Analytics KPI Investigation Agent
 
 **Python, Streamlit, Plotly**
 
@@ -64,9 +64,9 @@ runs.
 
 ## Data
 
-The public [IBM HR Analytics Employee Attrition dataset](https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset)
-(1,470 real employee records: department, job role, tenure, and whether
-each employee left). This is a single snapshot, not a time series, so
+A public employee attrition dataset (1,470 real employee records:
+department, job role, tenure, and whether each employee left). This is a
+single snapshot, not a time series, so
 `src/data_layer.py` derives a plausible monthly timeline from each
 employee's real tenure and attrition status — a hire month implied by
 tenure, and an exit month within a 30-month window for anyone who left.
@@ -133,12 +133,3 @@ streamlit run dashboard/app.py  # interactive conversational UI
 - This is a decision-support tool: it identifies rates, movements, and
   contributing populations. It does not infer *why* turnover changed —
   that interpretation still requires an analyst.
-
-## Résumé bullet
-
-> People Analytics Conversational KPI Agent | Python, Streamlit, Plotly
-> Built a conversational turnover-analytics agent separating language
-> understanding from calculation: natural-language questions are parsed
-> into a structured, registry-validated Query Plan before any number is
-> computed, supporting snapshot, comparison, change-driver, and trend
-> analysis plus a proactive cross-department anomaly scan.
