@@ -1,6 +1,6 @@
 # People Analytics KPI Investigation Agent
 
-**Python, Streamlit, Plotly**
+**Python, Streamlit, Plotly · designed for a Databricks/Snowflake-backed warehouse**
 
 A conversational analytics agent for investigating workforce turnover: ask a
 question in plain language, get a structured, auditable answer — never a
@@ -117,6 +117,14 @@ streamlit run dashboard/app.py  # interactive conversational UI
   the overall number, and a large department can move the overall number
   with only a modest rate change of its own. Conflating these is a common
   mistake in turnover reporting.
+
+- The governed table + registry pattern here (`monthly_panel`, `registry.py`)
+  is deliberately warehouse-agnostic: the same design maps directly onto a
+  managed Delta table in Databricks or a Snowflake warehouse in production,
+  with `calculation_engine.py`'s pandas logic becoming SQL views or a
+  Databricks SQL Warehouse query layer. This repo uses local pandas/Parquet
+  so it runs anywhere with no cloud account required — the calculation and
+  validation logic is what would carry over unchanged.
 
 ## Limitations
 
